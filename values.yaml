@@ -1,0 +1,7 @@
+dbtag: mysqlpod
+sql_root_passwd: redhat
+db_name: db1
+user_name: tirth 
+sql_passwd: redhat 
+fetag: wordpresspod 
+svctag: wpsvc

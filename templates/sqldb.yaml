@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: {{ .Values.dbtag }} 
+  name: {{ .Values.dbtag }}
+spec:
+  containers:
+    - image: mysql:5.7
+      name: {{ .Values.dbtag }}
+      env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: {{ .Values.sql_root_passwd }} 
+        - name: MYSQL_DATABASE
+          value: {{ .Values.db_name }}
+        - name: MYSQL_USER
+          value: {{ .Values.user_name }}
+        - name: MYSQL_PASSWORD
+          value: {{ .Values.sql_passwd }}
